@@ -1,0 +1,84 @@
+.lado-a-lado {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: row; 
+    
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid white;
+    width: 1000px;
+    height: 700px;
+    border-radius: 15px;
+    background-color: #3D9970;
+}
+
+.lista {
+    border: 2px solid darkblue;
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 11px;
+    background-color: darkgray;
+}
+
+.tarefas {
+    border: 2px solid red;
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 11px;
+    background-color: darkgray;
+}
+
+button {
+    background-color: rgba(173, 216, 230, 0.651);
+    
+    border: 1px solid black;
+    border-radius: 4px;
+    
+}
+
+.conteudo {
+    width: 400px;
+    height: 500px;
+    border: 2px solid purple;
+    /*  */
+    padding: 6px;
+    border-radius: 12px;
+    margin: 26px 10px 10px 10px;
+    list-style: none;
+    background-color: white;
+}
+
+.campo1, .campo2 {
+    border: 1px solid white;
+    margin-bottom: 10px;
+    padding: 2px;
+    align-content: flex-end;
+    align-self: flex-end;
+}
+
+.itembutao {
+    width: 250px;
+}
+
+.itemtarefas {
+    width: 40px;
+    border: 1px solid orange;
+    margin: 0px 10px 5px 10px;
+    
+    
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoes {
+    position: relative;
+    bottom: 0;   
+}
