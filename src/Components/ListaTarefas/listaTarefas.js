@@ -10,19 +10,36 @@ function ListaTarefa() {
     const [novoitemlista, setNovoitemlista] = useState('')
     const [novatarefa, setNovatarefa] = useState('')
     
-
+    
     function adicionaritemLista() {
-        setLista([...lista, {itemTitulo: novoitemlista}])
-        setNovoitemlista('')
-        salvar()
+        console.log('atual', {itemTitulo: novoitemlista})
+        console.log('itemTitulo: ', novoitemlista)
+                                
+        if (lista.some((cada) => cada.itemTitulo === novoitemlista)) {  
+           setLista([...lista])   
+           setNovoitemlista('')
+           alert('Não pode haver item lista igual')
+        }
+        else {
+           setLista([...lista, {itemTitulo: novoitemlista}])
+           setNovoitemlista('')
+           salvar()
+        }
     }
 
     function adicionarTarefa() {
-        setTarefas([...tarefas, {tarefaTitulo: novatarefa, doItem: itemlista}])
-        setNovatarefa('')
-        salvar()
+        if (tarefas.some(cada => cada.tarefaTitulo === novatarefa)) {
+           setTarefas([...tarefas])
+           setNovatarefa('')
+           alert('Não pode haver tarefas iguais')
+        }
+        else {
+           setTarefas([...tarefas, {tarefaTitulo: novatarefa, doItem: itemlista}])
+           setNovatarefa('')
+           salvar()
+        }
     }
-
+    
     function mostrarLista(nomeitemlista) {
         setItemlista(nomeitemlista)
     }
@@ -74,6 +91,7 @@ function ListaTarefa() {
 
     salvar()
 
+    console.log(lista)
     return (
         <div className="lado-a-lado">
             <div className="lista">
