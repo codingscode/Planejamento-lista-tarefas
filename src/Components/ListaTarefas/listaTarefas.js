@@ -72,7 +72,7 @@ function ListaTarefa() {
         var nova_tarefa = []
 
         for (var cada_tarefa of tarefas) {
-            if (cada_tarefa.doItem !== doitem_lista && cada_tarefa.tarefaTitulo !== tarefa_titulo) {
+            if (cada_tarefa.doItem !== tarefas.doitem_lista && cada_tarefa.tarefaTitulo !== tarefa_titulo) {
                nova_tarefa.push(cada_tarefa)
             }
             
