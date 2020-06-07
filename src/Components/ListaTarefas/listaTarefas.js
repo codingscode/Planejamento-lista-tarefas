@@ -72,12 +72,10 @@ function ListaTarefa() {
         var nova_tarefa = []
 
         for (var cada_tarefa of tarefas) {
-            if (cada_tarefa.doItem !== cada_tarefa.doitem_lista && cada_tarefa.tarefaTitulo !== tarefa_titulo) {
+            if (cada_tarefa.doItem !== doitem_lista && cada_tarefa.tarefaTitulo !== tarefa_titulo) {
                nova_tarefa.push(cada_tarefa)
             }
-            else {
-                
-            }
+            
         }
 
         setTarefas(nova_tarefa)
@@ -91,11 +89,10 @@ function ListaTarefa() {
 
     salvar()
 
-    console.log(lista)
     return (
         <div className="lado-a-lado">
             <div className="lista">
-                 <h1>Lista</h1>
+                 <h1 className="destaque">Lista</h1>
                  <ul className="conteudo">
                     {lista.map(cadaitem => {
                         return (
@@ -119,7 +116,7 @@ function ListaTarefa() {
             </div>
 
             <div className="tarefas">
-                 <h1>{itemlista === '' ? 'Minhas Tarefas' : itemlista}</h1>
+                 <h1 className="destaque">{itemlista === '' ? 'Minhas Tarefas' : itemlista}</h1>
                  <ul className="conteudo">
                      {itemlista === '' ? <li>Selecione um item ou crie outro</li> :
                       // eslint-disable-next-line 
@@ -140,7 +137,7 @@ function ListaTarefa() {
                  <div className="campo2">
                      <input placeholder="Nova Tarefa" value={novatarefa} onChange={(e) => setNovatarefa(e.target.value)}/>
                      <button >
-                         <FiPlusCircle size={30} color="white" onClick={adicionarTarefa}/>
+                         <FiPlusCircle size={30} color="purple" onClick={adicionarTarefa}/>
                      </button>
                  </div>
             </div>

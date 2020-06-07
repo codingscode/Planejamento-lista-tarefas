@@ -1,10 +1,19 @@
 
 * {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('./fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    src: url('./fonts/Lobster/Lobster-Regular.ttf');
 }
 
 body, img {
@@ -36,5 +45,6 @@ input {
     height: 30px;
     padding: 8px;
     border: 1px solid black;
+    margin-left: 8px;
 }
 
